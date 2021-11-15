@@ -1,0 +1,21 @@
+<h2>Product List:</h2>
+<table class="table table-striped">
+    <thead>
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let product of product">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>
+                <button (click)="updateProduct(product.id)" class="btn btn-info" >update</button>&nbsp;
+                <button (click)="deleteProduct(product.id)" class="btn btn-danger" >Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+                
